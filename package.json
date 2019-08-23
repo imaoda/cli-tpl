@@ -1,0 +1,29 @@
+{
+  "name": "cli-tpl",
+  "version": "0.0.8",
+  "description": "通用脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dcli": "./bin/dcli"
+  },
+  "repository": "https://github.com/imaoda/cli-tpl",
+  "keywords": [
+    "cli",
+    "脚手架"
+  ],
+  "author": "wangyongfeng",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "import-from": "^3.0.0",
+    "inquirer": "^6.5.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "osenv": "^0.1.5",
+    "resolve-from": "^5.0.0",
+    "yeoman-environment": "^2.4.0"
+  }
+}
