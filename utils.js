@@ -10,9 +10,9 @@ class Utils {
   getInstalledStatus(pkgName, targetDir) {
     const genObj = this.getInstalledPkgs(targetDir);
     if (!genObj[pkgName]) return 0;
-    const lts = execSync(`npm view ${pkgName} version --json --registry=https://registry.npm.taobao.org`)
+    const lts = execSync(`npm view ${pkgName} version --json --registry=https://registry.npm.taobao.org`) + '' // buffer 转 string
     const current = this.requireFrom(targetDir, path.join(pkgName, "package.json")).version;
-    if (current === lts) return 2;
+    if (current === lts.trim()) return 2;
     return 1;
   }
 
