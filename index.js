@@ -42,7 +42,7 @@ class M extends Utils {
   checkCliUpdate() {
     const pkgName = pkg.name
     const version = pkg.version
-    const ltsVersion = execSync(`npm view ${pkgName} version --json --registry=https://registry.npm.taobao.org`)
+    const ltsVersion = execSync(`npm view ${pkgName} version --registry=https://registry.npm.taobao.org`)
     if (ltsVersion !== version) this.console(`cli 版本过旧，建议执行 npm i -g ${pkgName}@latest 升级 cli： ${version} -> ${ltsVersion} `)
   }
   checkTplDir() {
